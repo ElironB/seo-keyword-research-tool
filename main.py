@@ -1,6 +1,6 @@
 from fastapi import FastAPI, Query
 from SeoKeywordResearch import SeoKeywordResearch
-import dotenv
+from dotenv import load_dotenv
 import os
 
 load_dotenv()
