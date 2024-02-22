@@ -1,18 +1,14 @@
 from fastapi import FastAPI, Query
 from SeoKeywordResearch import SeoKeywordResearch
-from dotenv import load_dotenv
-import os
 
-load_dotenv()
+
+
 main  = FastAPI()
 
 @main.get("/seo-keyword-research/")
 async def seo_keyword_research(
   query: str = Query(...),serper_api_key: str = Query(...)
 ):
-  if(serper_api_key != os.getenv["SERPER_API_KEY"]):
-    return {"message": "Invalid API Key"}
-  else:
     keyword_research = SeoKeywordResearch(
         query=query,
         api_key=serper_api_key,
