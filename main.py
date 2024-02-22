@@ -1,7 +1,7 @@
 from fastapi import FastAPI, Query
 from SeoKeywordResearch import SeoKeywordResearch
 import dotenv
-
+import os
 
 main  = FastAPI()
 
