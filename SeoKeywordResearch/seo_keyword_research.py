@@ -75,7 +75,7 @@ class SeoKeywordResearch:
                     self.__get_depth_results(question.get('next_page_token'), depth - 1)
 
 
-    def get_related_questions(self, depth_limit: int = 0) -> list:
+    def get_related_questions(self, depth_limit: int = 1) -> list:
         params = {
             'api_key': self.api_key,            # https://serpapi.com/manage-api-key
             'engine': 'google',                 # search engine
