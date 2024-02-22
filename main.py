@@ -10,7 +10,7 @@ main  = FastAPI()
 async def seo_keyword_research(
   query: str = Query(...),serper_api_key: str = Query(...)
 ):
-  if(serper_api_key != os.getenv['SERPER_API_KEY']):
+  if(serper_api_key != os.getenv["SERPER_API_KEY"]):
     return {"message": "Invalid API Key"}
   else:
     keyword_research = SeoKeywordResearch(
